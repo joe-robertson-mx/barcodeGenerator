@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.barcodegenerator.BarcodeGenerator" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Barcode Generator</name>
+    <description>Generate barcodes from strings</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="value" type="attribute" required="true">
+                <caption>Barcode Value</caption>
+                <description>The information to be encrypted into the barcode</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="barcodeType" type="enumeration" defaultValue="CODE128">
+                <caption>Barcode Type</caption>
+                <description>The type of barcode</description>
+                <enumerationValues>
+                    <enumerationValue key="CODE128">CODE128</enumerationValue>
+                    <enumerationValue key="EAN13">EAN13</enumerationValue>
+                    <enumerationValue key="EAN8">EAN8</enumerationValue>
+                    <enumerationValue key="EAN5">EAN5</enumerationValue>
+                    <enumerationValue key="EAN2">EAN2</enumerationValue>
+                    <enumerationValue key="UPC">UPC</enumerationValue>
+                    <enumerationValue key="CODE39">CODE39</enumerationValue>
+                    <enumerationValue key="ITF14">ITF14</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="width" type="integer" defaultValue="2">
+                <caption>Width</caption>
+                <description>A width factor (2 is standard)</description>
+            </property>
+            <property key="height" type="integer" defaultValue="100">
+                <caption>Height in Pixels</caption>
+                <description>Default value is 100px</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
